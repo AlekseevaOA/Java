@@ -17,3 +17,6 @@ name_gri="Грипп";
 name_vich="ВИЧ";
 var num_gri_wed=2;
 var num_gri_fri=1;
+var num_vich_fri=3;
+var num_vich_wen=2;
+num_gri_week=name_gri+(num_gri_fri+num_gri_wed)+name_vich+(num_vich_fri+num_vich_wen);
