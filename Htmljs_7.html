@@ -81,7 +81,7 @@
             "SNILS 2": ["Сидоров", "Сидор", "Сидорович", 20, "мая", 1980, "м", "медотвод"],
             "SNILS 3": ["Петрова", "Мария", "Ивановна", 1, "июня", 1975, "ж", "назначено"],
         };
-        /*console.log(person);
+        console.log(person);
         SNILS4="SNILS 4"
         let lastname;
         lastname=prompt("Введите фамилию пациента", lastname);
@@ -103,13 +103,19 @@
         infoPazient[3]=date;
         console.log(infoPazient);
         person.SNILS4=infoPazient;
-        console.log(person);*/
+        console.log(person);
 
+        //Получаем информацию о пациенте по СНИЛС
         let SNILS;
-        SNILS=prompt("Введите SNILS пациента", SNILS);
+        var FirstFunction = function (person, SNILS) 
+        { SNILS=prompt("Введите SNILS пациента", SNILS);
         infoname=person[SNILS];
-        console.log(infoname);
+        //console.log(infoname);
         alert("Информация о пацианте"+ infoname);
+        statusPriv = person[SNILS][7];
+        console.log(statusPriv);
+    };
+        FirstFunction(person, SNILS);
 
         /*let phase;
         phase=prompt("Введите действие или медотвод или назначено или исполнено", phase);
@@ -119,9 +125,26 @@
         console.log(person);*/
         
         //Извлекаем информацию о текущем статусе прививки
-        statusPriv=person[SNILS][7];
-        
+       var SecondFunction = function (statusPriv, infoname){
+
+        //statusPriv = person[SNILS][7];
+
+        //Проверяем возможность изменения статуса
+        if (statusPriv==="исполнено")
+        { alert("Отказано в прививке пациенту" + infoname); } 
+        else if (statusPriv==="медотвод")
+        { alert ("Отказано в прививке пациенту" + infoname);}
+        else { alert("Исполнить прививку пациенту" + infoname);}
+       }
+       ForSecond = FirstFunction(person, SNILS);
+       SecondFunction(statusPriv, infoname);
+        //Предлагаем закончить или продолжить работу в этом окне
+        var prolongation = confirm("Продолжить проверку прививочного статуса?");
+        if (prolongation) 
+        { console.log("Введите СНИЛС"); }
+        else { console.log("Сеанс проверки прививочного статуса закончен");}
     </script>
 </body>
+
 
 </html>
