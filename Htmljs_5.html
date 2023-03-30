@@ -80,27 +80,29 @@
             "SNILS 1": ["Иванов", "Иван", "Иванович", 15, "мая", 1974, "м"],
             "SNILS 2": ["Сидоров", "Сидор", "Сидорович", 20, "мая", 1980, "м"],
             "SNILS 3": ["Петрова", "Мария", "Ивановна", 1, "июня", 1975, "ж"],
-        
         };
         console.log(person);
         SNILS4="SNILS 4"
         let lastname;
-        lastname=prompt("Введите имя пациента", lastname);
+        lastname=prompt("Введите фамилию пациента", lastname);
         //console.log(lastname);
-        infoPazient[0]=lastname;
+        infoPazient[0]= lastname;
         console.log(infoPazient);
+
         let firstname;
         firstname=prompt("Введите имя пациента", firstname);
         //console.log(lastname);
-        infoPazient[1]=firstname;
+        infoPazient[1]= firstname;
         console.log(infoPazient);
+
         let middlename;
-        middlename=prompt("Введите имя пациента", middlename);
+        middlename=prompt("Введите отчество пациента", middlename);
         //console.log(lastname);
         infoPazient[2]=middlename;
         console.log(infoPazient);
+
         let date;
-        date=prompt("Введите имя пациента", date);
+        date=prompt("Введите дату рождения пациента", date);
         infoPazient[3]=date;
         console.log(infoPazient);
         person.SNILS4=infoPazient;
